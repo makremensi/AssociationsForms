@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Arbitres{% endblock %}
+
+{% block body %}
+    <h1>Arbitres</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ arbitre.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ arbitre.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ arbitre.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Degrre</th>
+                <td>{{ arbitre.degrre }}</td>
+            </tr>
+            <tr>
+                <th>Experience</th>
+                <td>{{ arbitre.experience }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('arbitres_index') }}">back to list</a>
+
+    <a href="{{ path('arbitres_edit', {'id': arbitre.id}) }}">edit</a>
+
+    {{ include('arbitres/_delete_form.html.twig') }}
+{% endblock %}

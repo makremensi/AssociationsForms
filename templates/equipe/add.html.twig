@@ -1,0 +1,10 @@
+{#{{ form(formEquipe) }}#}
+{{form_start(formEquipe)}}
+<table>
+    <tr><td>Nom : </td><td>{{ form_widget(formEquipe.nom) }}</td></tr>
+    <tr><td>Pays : </td><td>{{ form_widget(formEquipe.pays) }}</td></tr>
+    <tr><td>Specialite : </td><td>{{ form_widget(formEquipe.spcialite) }}</td></tr>
+    <tr><td>Nombre de joueurs : </td><td>{{ form_widget(formEquipe.nbJoueurs) }}</td></tr>
+    <tr><td>Nom : </td><td>{{ form_widget(formEquipe.save) }}</td></tr>
+</table>
+{{form_end(formEquipe)}}

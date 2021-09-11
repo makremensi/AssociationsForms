@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Arbitres{% endblock %}
+
+{% block body %}
+    <h1>Edit Arbitres</h1>
+
+    {{ include('arbitres/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('arbitres_index') }}">back to list</a>
+
+    {{ include('arbitres/_delete_form.html.twig') }}
+{% endblock %}

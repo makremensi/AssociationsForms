@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello JoueurController!{% endblock %}
+
+{% block body %}
+
+    <h1>Liste des joueurs</h1>
+    <table align=center border=1>
+        <tr><th>Identifiant</th><th>Nom</th><th>Prenom</th><th>Age</th><th>Numero</th><th>Equipe</th>
+        {% for j in joueurs %}
+            <tr>
+            <td align=center>{{j.id}}</td><td>{{j.nom}}</td><td>{{j.prenom}}</td><td>{{j.age}}</td><td>{{j.numero}}</td><td>{{j.equipe.nom}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
